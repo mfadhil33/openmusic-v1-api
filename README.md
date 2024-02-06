@@ -1,4 +1,4 @@
-# OpenMusic-v1-apo
+# OpenMusic-v1-api
 
 Nodejs->HapiJS->postgresql
 
