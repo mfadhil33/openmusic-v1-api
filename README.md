@@ -31,7 +31,7 @@ Untuk menjalankan server, gunakan perintah berikut:
 npm run start-dev
 ```
 
-Server akan berjalan di **http://localhost:3000/**. Buka browser dan akses URL tersebut untuk melihat aplikasi Anda.
+Server akan berjalan di **http://localhost:5000/**. Buka browser dan akses URL tersebut untuk melihat aplikasi Anda.
 
 ## Kontak
 
