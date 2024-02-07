@@ -2,9 +2,11 @@ require("dotenv").config();
 
 const Hapi = require("@hapi/hapi");
 const songs = require("./api/songs");
-
+const albums = require("./api/albums");
 const SongsService = require("./services/postgres/SongsService");
 const SongsValidator = require("./validator/songs");
+const AlbumsService = require("./services/postgres/AlbumsService");
+const AlbumsValidator = require("./validator/albums");
 
 const init = async () => {
   const songsService = new SongsService();
@@ -19,13 +21,22 @@ const init = async () => {
     },
   });
 
-  await server.register({
-    plugin: songs,
-    options: {
-      service: songsService,
-      validator: SongsValidator,
+  await server.register([
+    {
+      plugin: songs,
+      options: {
+        service: songsService,
+        validator: SongsValidator,
+      },
     },
-  });
+    {
+      plugin: albums,
+      options: {
+        service: AlbumsService,
+        validator: AlbumsValidator,
+      },
+    },
+  ]);
 
   await server.start();
   console.log(`Server is running on ${server.info.uri}`);
