@@ -39,7 +39,7 @@ class SongsHandler {
       // client error
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
@@ -80,7 +80,7 @@ class SongsHandler {
     } catch (err) {
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
@@ -113,7 +113,7 @@ class SongsHandler {
       //client error
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
@@ -143,7 +143,7 @@ class SongsHandler {
       // client error
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);

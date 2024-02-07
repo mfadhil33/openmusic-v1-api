@@ -28,7 +28,7 @@ class AlbumsHandler {
     } catch (err) {
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
@@ -60,7 +60,7 @@ class AlbumsHandler {
       // client error
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
@@ -92,7 +92,7 @@ class AlbumsHandler {
       // client error handling
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
@@ -122,7 +122,7 @@ class AlbumsHandler {
       // client error
       if (err instanceof ClientError) {
         const res = h.response({
-          status: "Failed",
+          status: "fail",
           message: err.message,
         });
         res.code(err.statusCode);
