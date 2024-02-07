@@ -27,7 +27,7 @@ exports.up = (pgm) => {
       notNull: false,
     },
     albumId: {
-      type: "varchar(50",
+      type: "varchar(50)",
     },
     inserted_at: {
       type: "TEXT",
