@@ -114,9 +114,9 @@ class SongsHandler {
       if (err instanceof ClientError) {
         const res = h.response({
           status: "failed",
-          message: error.message,
+          message: err.message,
         });
-        res.code(error.statusCode);
+        res.code(err.statusCode);
         return res;
       }
 
