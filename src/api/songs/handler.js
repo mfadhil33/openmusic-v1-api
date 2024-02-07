@@ -152,7 +152,7 @@ class SongsHandler {
 
       // Server ERROR!
       const res = h.response({
-        status: "error",
+        status: "Error",
         message: "Sorry, there was a failure on our server",
       });
       res.code(500);
